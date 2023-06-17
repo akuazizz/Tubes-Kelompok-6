@@ -34,3 +34,29 @@ def pilih_menu(menu):
     else:
         print("Pesanan Anda kosong.")
     panggil(menu)
+
+    # daftar panggil program (juna)
+def panggil(menu):
+    print("\n<=========Menu Order Makanan=========>")
+    print("1. Lihat daftar Menu dan harga")
+    print("2. Urutkan menu dari harga termurah")
+    print("3. Urutkan menu dari harga termahal")
+    print("4. Pilih menu yang akan dipesan")
+    print("5. Keluar Program")
+
+    pilih = int(input("Pilih: "))
+    if pilih == 1:
+        display_menu(menu)
+    elif pilih == 2:
+        urutascending(menu)
+    elif pilih == 3:
+        urutdescending(menu)
+    elif pilih == 4:
+        pilih_menu(menu)
+    elif pilih == 5:
+        print("Terima kasih telah memesan makanan")
+    else:
+        print("Pilihan tidak valid. Silakan pilih nomor yang tersedia.")
+        panggil(menu)
+
+panggil(menu)
