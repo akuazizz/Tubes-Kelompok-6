@@ -1,3 +1,21 @@
+# daftar menu dan harga (Ahmad Junaidi)
+menu = [
+    ["Nasi Goreng", 15000],
+    ["Mie Goreng", 12000],
+    ["Ayam Goreng", 18000],
+    ["Gado-Gado", 10000],
+    ["Soto Ayam", 15000]
+]
+
+def display_menu(menu):
+    print("\nDaftar Menu Makanan:")
+    for i in range(len(menu)):
+        item = menu[i][0]
+        price = menu[i][1]
+        print(f"{i+1}. {item} - Rp {price}")
+    panggil(menu)
+
+
 # menu yang akan dipesan (aziz)
 def pilih_menu(menu):
     pesanan = []
