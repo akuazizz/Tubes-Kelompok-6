@@ -72,7 +72,7 @@ def pilih_menu(menu):
         print("Pesanan Anda kosong.")
     panggil(menu)
 
-    # daftar panggil program (juna)
+   # daftar panggil program (Ahmad Junaidi)
 def panggil(menu):
     print("\n<=========Menu Order Makanan=========>")
     print("1. Lihat daftar Menu dan harga")
