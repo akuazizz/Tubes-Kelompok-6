@@ -4,7 +4,12 @@ menu = [
     ["Mie Goreng", 12000],
     ["Ayam Goreng", 18000],
     ["Gado-Gado", 10000],
-    ["Soto Ayam", 15000]
+    ["Soto Ayam", 15000],
+    ["Es Teh", 3000],
+    ["Lemon Tea", 5000],
+    ["Es Jeruk", 5000],
+    ["Jus Alpukat", 7000],
+    ["Jus Mangga", 7000]
 ]
 
 def display_menu(menu):
