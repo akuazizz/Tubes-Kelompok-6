@@ -1,4 +1,4 @@
-# daftar menu dan harga 
+# daftar menu dan harga
 menu = [
     ["Nasi Goreng", 15000],
     ["Mie Goreng", 12000],
@@ -9,8 +9,9 @@ menu = [
     ["Lemon Tea", 5000],
     ["Es Jeruk", 5000],
     ["Jus Alpukat", 7000],
-    ["Jus Mangga", 7000]
+    ["Jus Mangga", 7000],
 ]
+
 
 def display_menu(menu):
     print("\nDaftar Menu Makanan:")
@@ -20,20 +21,22 @@ def display_menu(menu):
         print(f"{i+1}. {item} - Rp {price}")
     panggil(menu)
 
-# urutan menu termurah bubble_sort(hanifa)
+
+# urutan menu termurah bubble_sort
 def urutascending(menu):
     n = len(menu)
-    
+
     for i in range(n):
-        for j in range(n -1 - i):
+        for j in range(n - 1 - i):
             if menu[j][1] > menu[j + 1][1]:
                 menu[j], menu[j + 1] = menu[j + 1], menu[j]
     return menu
 
+
 # urutan menu termahal bubble_sort
 def urutdescending(menu):
     n = len(menu)
-    
+
     for i in range(n - 1):
         for j in range(n - 1 - i):
             if menu[j][1] < menu[j + 1][1]:
@@ -41,7 +44,7 @@ def urutdescending(menu):
     return menu
 
 
-# menu yang akan dipesan 
+# menu yang akan dipesan
 def pilih_menu(menu):
     pesanan = []
     selesai = False
@@ -56,7 +59,7 @@ def pilih_menu(menu):
 
         pilihan = input("Masukkan nomor menu yang akan dipesan (0 untuk selesai): ")
 
-        if pilihan == '0':
+        if pilihan == "0":
             selesai = True
         elif pilihan.isdigit() and int(pilihan) in range(1, len(menu) + 1):
             menu_index = int(pilihan) - 1
@@ -78,7 +81,8 @@ def pilih_menu(menu):
         print("Pesanan Anda kosong.")
     panggil(menu)
 
-# daftar panggil program 
+
+# daftar panggil program
 def panggil(menu):
     print("\n<=========Menu Order Makanan=========>")
     print("1. Lihat daftar Menu dan harga")
@@ -109,5 +113,6 @@ def panggil(menu):
     else:
         print("Pilihan tidak valid. Silakan pilih nomor yang tersedia.")
         panggil(menu)
+
 
 panggil(menu)
