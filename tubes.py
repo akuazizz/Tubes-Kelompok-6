@@ -15,6 +15,25 @@ def display_menu(menu):
         print(f"{i+1}. {item} - Rp {price}")
     panggil(menu)
 
+# menu termurah (hanifa)
+def urutascending(menu):
+    print("\nUrutan Menu Makanan dari Harga Termurah :")
+    sorted_menu = sorted(menu, key=lambda x: x[1])
+    for i, item in enumerate(sorted_menu, start=1):
+        name = item[0]
+        price = item[1]
+        print(f"{i}. {name} - Rp {price}")
+    panggil(menu)
+
+# menu termahal (hanifa)
+def urutdescending(menu):
+    print("\nUrutan Menu Makanan dari Harga Termahal :")
+    sorted_menu = sorted(menu, key=lambda x: x[1], reverse=True)
+    for i, item in enumerate(sorted_menu, start=1):
+        name = item[0]
+        price = item[1]
+        print(f"{i}. {name} - Rp {price}")
+    panggil(menu)
 
 # menu yang akan dipesan (aziz)
 def pilih_menu(menu):
