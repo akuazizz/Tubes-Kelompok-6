@@ -80,39 +80,3 @@ def pilih_menu(menu):
     else:
         print("Pesanan Anda kosong.")
     panggil(menu)
-
-
-# daftar panggil program
-def panggil(menu):
-    print("\n<=========Menu Order Makanan=========>")
-    print("1. Lihat daftar Menu dan harga")
-    print("2. Urutkan menu dari harga termurah")
-    print("3. Urutkan menu dari harga termahal")
-    print("4. Pilih menu yang akan dipesan")
-    print("5. Keluar Program")
-
-    pilih = int(input("Pilih: "))
-    if pilih == 1:
-        display_menu(menu)
-    elif pilih == 2:
-        sorted_menu = urutascending(menu)
-        print("\nUrutan Menu Makanan dari Harga Termurah :")
-        for item in sorted_menu:
-            print(item[0], "-", "Rp", item[1])
-        panggil(menu)
-    elif pilih == 3:
-        sorted_menu = urutdescending(menu)
-        print("\nUrutan Menu Makanan dari Harga Termahal :")
-        for item in sorted_menu:
-            print(item[0], "-", "Rp", item[1])
-        panggil(menu)
-    elif pilih == 4:
-        pilih_menu(menu)
-    elif pilih == 5:
-        print("Terima kasih telah memesan makanan")
-    else:
-        print("Pilihan tidak valid. Silakan pilih nomor yang tersedia.")
-        panggil(menu)
-
-
-panggil(menu)
