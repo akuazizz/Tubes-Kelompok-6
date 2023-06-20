@@ -80,6 +80,8 @@ def pilih_menu(menu):
     else:
         print("Pesanan Anda kosong.")
     panggil(menu)
+    
+    
 # daftar panggil program
 def panggil(menu):
     print("\n<=========Menu Order Makanan=========>")
