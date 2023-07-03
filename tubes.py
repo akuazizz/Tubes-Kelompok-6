@@ -110,7 +110,7 @@ def panggil(menu):
     elif pilih == 4:
         pilih_menu(menu)
     elif pilih == 5:
-        print("Terima kasih telah memesan makanan, silahkan bayar di kasir")
+        print("Terima kasih telah memesan makanan, have a nice day:)")
     else:
         print("Pilihan tidak valid. Silakan pilih nomor yang tersedia.")
         panggil(menu)
