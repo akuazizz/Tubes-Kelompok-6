@@ -77,6 +77,7 @@ def pilih_menu(menu):
             total_harga += price
             print(f"{i}. {name} - Rp {price}")
         print(f"Total Harga: Rp {total_harga}")
+        metode_pembayaran(total_harga)
     else:
         print("Pesanan Anda kosong.")
     panggil(menu)
@@ -113,6 +114,49 @@ def panggil(menu):
     else:
         print("Pilihan tidak valid. Silakan pilih nomor yang tersedia.")
         panggil(menu)
+
+
+# pembayaran
+def metode_pembayaran(total_harga):
+    print("\n<=========Metode Pembayaran=========>")
+    print("Pilih metode pembayaran:")
+    print("1. Tunai")
+    print("2. GoPay")
+    print("3. Dana")
+    print("4. OVO")
+    print("5. ShopeePay")
+
+    pilih = int(input("Pilih metode pembayaran: "))
+    if pilih == 1:
+        print(f"\nTotal Harga: Rp {total_harga}")
+        bayar = int(input("Masukkan jumlah uang yang Anda bayarkan: "))
+        
+        if bayar < total_harga:
+            print("Jumlah uang yang Anda bayarkan kurang.")
+            metode_pembayaran(total_harga)
+        else:
+            kembalian = bayar - total_harga
+            print(f"Kembalian Anda: Rp {kembalian}")
+    elif pilih in range(2, 6):
+        print(f"\nTotal Harga: Rp {total_harga}")
+        nomor_akun = input("Masukkan nomor akun: ")
+        print(f"Pembayaran dengan {metode_pembayaran_string(pilih)} berhasil.")
+    else:
+        print("Pilihan tidak valid. Silakan pilih nomor yang tersedia.")
+        metode_pembayaran(total_harga)
+
+
+def metode_pembayaran_string(pilihan):
+    if pilihan == 2:
+        return "GoPay"
+    elif pilihan == 3:
+        return "Dana"
+    elif pilihan == 4:
+        return "OVO"
+    elif pilihan == 5:
+        return "ShopeePay"
+    else:
+        return "Metode Pembayaran"
 
 
 panggil(menu)
