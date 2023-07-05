@@ -14,7 +14,7 @@ menu = [
 
 
 def display_menu(menu):
-    print("\nDaftar Menu Makanan:")
+    print("\nDaftar Menu Makanan & Minuman:")
     for i in range(len(menu)):
         item = menu[i][0]
         price = menu[i][1]
@@ -50,7 +50,7 @@ def pilih_menu(menu):
     selesai = False
 
     while not selesai:
-        print("\nMenu Makanan:")
+        print("\nMenu Makanan & Minuman:")
         for i in range(len(menu)):
             item = menu[i][0]
             price = menu[i][1]
@@ -97,20 +97,20 @@ def panggil(menu):
         display_menu(menu)
     elif pilih == 2:
         sorted_menu = urutascending(menu)
-        print("\nUrutan Menu Makanan dari Harga Termurah :")
+        print("\nUrutan Menu Makanan & Minuman dari Harga Termurah :")
         for item in sorted_menu:
             print(item[0], "-", "Rp", item[1])
         panggil(menu)
     elif pilih == 3:
         sorted_menu = urutdescending(menu)
-        print("\nUrutan Menu Makanan dari Harga Termahal :")
+        print("\nUrutan Menu Makanan dan Minumandari Harga Termahal :")
         for item in sorted_menu:
             print(item[0], "-", "Rp", item[1])
         panggil(menu)
     elif pilih == 4:
         pilih_menu(menu)
     elif pilih == 5:
-        print("Terima kasih telah memesan makanan, have a nice day:)")
+        print("Terima kasih telah memesan, have a nice day:)")
     else:
         print("Pilihan tidak valid. Silakan pilih nomor yang tersedia.")
         panggil(menu)
